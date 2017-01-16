@@ -12,7 +12,6 @@ $(function(){
 		var img = $(".works .container a");
 		var imgWidth = img.eq(0).outerWidth() + 20;
 		var cols = Math.floor($(window).width() / imgWidth);
-		// var imgHeightArr = [0];
 		var arrL = [];
 		var arrT = [];
 		$(".works .container").width(imgWidth * cols).css("margin","0 auto");
@@ -43,25 +42,6 @@ $(function(){
 			}
 			return index;
 		}
-
-		// $.each(img,function(index,value){
-		// 	var imgHeight = img.eq(index).outerHeight() + 20;
-		// 	if(index < cols){
-		// 		imgHeightArr[index] = imgHeight;
-		// 	}else{
-		// 		var imgHeightMix = Math.min.apply(null,imgHeightArr);
-		// 		var imgHeightMixIndex = $.inArray(imgHeightMix,imgHeightArr);
-		// 		$(value).css({
-		// 			"position" : "absolute",
-		// 			"left" : imgWidth * imgHeightMixIndex,
-		// 			"top" : imgHeightMix
-		// 		});
-		// 		imgHeightArr[imgHeightMixIndex] += img.eq(index).outerHeight() + 20;
-		// 	};
-		// 	var imgHeightMax = Math.max.apply(null,imgHeightArr);
-		// 	$(".works .container").height(imgHeightMax);
-		// });
-
 	};
 	// 图片弹框
 	function popup(){
