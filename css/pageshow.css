@@ -1,0 +1,123 @@
+/*banner样式*/
+.banner{
+	overflow: hidden;
+	height: 210px;
+	background: url("../images/common/banner01.jpg");
+}
+.banner h1{
+	float: left;
+	height: 210px;
+	line-height: 210px;
+    letter-spacing: .5em;
+    font-size: 30px;
+    color: #eee;
+}
+.banner span{
+	float: right;
+	height: 210px;
+	line-height: 210px;
+    letter-spacing: .5em;
+    font-size: 12px;
+    color: #eee;
+}
+/*作品导航*/
+.worksNav ul{
+	overflow: hidden;
+	padding: 0
+}
+.worksNav li{
+	float: left;
+	width: 120px;
+}
+.worksNav li a{
+	display: block;
+	padding: 10px 0 30px;
+	text-align: center;
+	letter-spacing: .3em;
+	font-size: 13px;
+	color: #999;
+	transition: color .5s linear;
+}
+.worksNav li a:hover{
+	color: #000;
+}
+.worksNav li a i{
+	display: block;
+	padding: 20px 10px 10px;
+	font-size: 28px;
+}
+/*作品展示*/
+.works{
+	position: relative;
+	background: #f8f8f8;
+	padding-top: 50px;
+}
+.works .container{
+	position: relative;
+	overflow: hidden;
+}
+.works a{
+	display: block;
+	padding: 10px;
+	margin-right: 20px;
+	float: left;
+	box-sizing: border-box;
+	background: #fff;
+}
+.works a img{
+	display: block;
+	width: 200px;
+}
+.works a i{
+	display: block;
+	margin-top: 10px;
+	text-align: right;
+	color: #ccc;
+}
+/*图片弹框*/
+.popup{
+	position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index:999999999;
+}
+.popup-container{
+	position: relative;
+	margin:0 auto;
+	border: 5px solid #999;
+	border-radius: 10px;
+	overflow: hidden;
+	background: #fff;
+}
+.popup .popup-container img{
+	display: block;
+	margin: 5px;
+	margin-bottom: 0;
+}
+.popup .popup-container div{
+	position: relative;
+	font-size: 20px;
+	background: #E6E5E5;
+	margin: 5px;
+	margin-top: 0;
+}
+.popup .popup-container div button{
+	position: absolute;
+	right: 10px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	width: 22px;
+	height: 22px;
+	background: url("../images/common/controls.png") -101px -26px;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+.popup .popup-container div button:hover{
+	background: url("../images/common/controls.png") -101px -1px;
+}

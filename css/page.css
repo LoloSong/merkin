@@ -1,0 +1,129 @@
+/*banner样式*/
+.banner{
+	overflow: hidden;
+	height: 210px;
+	background: url("../images/common/banner01.jpg");
+}
+.banner h1{
+	float: left;
+	height: 210px;
+	line-height: 210px;
+    letter-spacing: .5em;
+    font-size: 30px;
+    color: #eee;
+}
+.banner span{
+	float: right;
+	height: 210px;
+	line-height: 210px;
+    letter-spacing: .5em;
+    font-size: 12px;
+    color: #eee;
+}
+/*作品导航*/
+.worksNav ul{
+	overflow: hidden;
+	padding: 0
+}
+.worksNav li{
+	float: left;
+	width: 120px;
+}
+.worksNav li a{
+	display: block;
+	padding: 10px 0 30px;
+	text-align: center;
+	letter-spacing: .3em;
+	font-size: 13px;
+	color: #999;
+	transition: color .5s linear;
+}
+.worksNav li a:hover{
+	color: #000;
+}
+.worksNav li a i{
+	display: block;
+	padding: 20px 10px 10px;
+	font-size: 28px;
+}
+/*作品展示*/
+.works{
+	margin-bottom: 60px;
+}
+.works .works-list{
+	overflow: hidden;
+}
+.works .works-list a{
+	display: block;
+	overflow: hidden;
+	float: left;
+	box-sizing: border-box;
+	width: 300px;
+	height: 200px;
+}
+.item-inner{
+	position: relative;
+	overflow: hidden;
+}
+.item-inner img{
+	width: 100%;
+	transition: all 0.3s linear;
+}
+.item-inner h2{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: -30px;
+	letter-spacing: .2em;
+	font-size: 14px;
+	font-weight: normal;
+	color: #333;
+	z-index: 9999;
+	transition: all 0.3s linear;
+}
+.item-inner span{
+	position: absolute;
+	display: block;
+	width: 300px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0);
+	transition: all 0.3s linear;
+}
+.item-inner:hover span{
+	background: rgba(255,255,255,.8);
+}
+.item-inner:hover img{
+	transform: scale(1.1);
+}
+.item-inner:hover h2{
+	bottom: 40px;
+}
+.pageNav{
+	margin-top: 60px;
+	text-align: center;
+}
+.pageNav a{
+	display: inline-block;
+}
+.pageNav span{
+	display: inline-block;
+    margin: 5px;
+	padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    color: #999;
+    transition: all .3s linear;
+}
+.pageNav .active span{
+	border-color: #044bcb;
+    background: #044bcb;
+    color: #fff;
+}
+.pageNav a:hover span{
+	border-color: #044bcb;
+    background: #044bcb;
+    color: #fff;
+}
