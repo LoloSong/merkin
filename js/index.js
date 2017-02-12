@@ -1,9 +1,13 @@
 ;(function(){
 	$(function(){
+		$(window).resize(function(){
+			bannerSize();
+		});
 		// 焦点图滚动
-		banner();
-		function banner(){
-			var index = 0;          //当前显示图片的索引
+		bannerSize();
+		bannerPlay();
+		var index = 0;          //当前显示图片的索引
+		function bannerSize(){
 			// 设置banner宽高
 			var $banner = $(".banner");
 			var bannerWidth = $(window).width();
@@ -14,11 +18,17 @@
 			//设置图片宽度
 			var $img = $(".banner-pic img");
 			$img.width(bannerWidth);
+			//图片位置初始化
+			$(".banner-pic").animate({
+				"left" : 0 + "px"
+			});
+			index = 0;
 			// 设置banner-pic宽
 			var $bannerPic = $(".banner-pic");
 			var bannerPicWidth = ($img.eq(0).width()) * $img.length;
 			$bannerPic.width(bannerPicWidth + "px");
 			//动态添加banner-btn按钮
+			$(".banner-btn").empty();
 			$img.each(function(){
 				$(".banner-btn").append("<span></span>");
 			});
@@ -26,11 +36,14 @@
 			//banner-btn按钮点击事件
 			$(".banner-btn span").click(function(){
 				$(this).addClass("active").siblings().removeClass("active");
-				$bannerPic.animate({
-					"left" : -($banner.width() * $(this).index()) + "px"
+				$(".banner-pic").animate({
+					"left" : -($(".banner").width() * $(this).index()) + "px"
 				});
 				index = $(this).index();
 			});
+			
+		}
+		function bannerPlay(){
 			//箭头显示与消失效果
 			$(".banner-prev").css("left","-80px");
 			$(".banner-next").css("right","-80px");
@@ -54,20 +67,20 @@
 			//左右轮播函数
 			function moveRight(){
 				index++;
-				if(index == $img.length){
+				if(index == $(".banner-pic img").length){
 					index = 0;
 				}
-				$bannerPic.animate({
-					"left" : -($banner.width() * index) + "px"
+				$(".banner-pic").animate({
+					"left" : -($(".banner").width() * index) + "px"
 				});
 			}
 			function moveLeft(){
 				index--;
 				if(index == -1){
-					index = $img.length -1;
+					index = $(".banner-pic img").length -1;
 				}
-				$bannerPic.animate({
-					"left" : -($banner.width() * index) + "px"
+				$(".banner-pic").animate({
+					"left" : -($(".banner").width() * index) + "px"
 				});
 			}
 		}

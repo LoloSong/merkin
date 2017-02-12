@@ -24,8 +24,6 @@ $(function(){
 			var imgMixIndex = getMix();
 			$(obj).css({
 					"position" : "absolute",	
-			});
-			$(obj).animate({
 					"left" : arrL[imgMixIndex],
 					"top" : arrT[imgMixIndex]
 			});
@@ -43,25 +41,6 @@ $(function(){
 			}
 			return index;
 		}
-
-		// $.each(img,function(index,value){
-		// 	var imgHeight = img.eq(index).outerHeight() + 20;
-		// 	if(index < cols){
-		// 		imgHeightArr[index] = imgHeight;
-		// 	}else{
-		// 		var imgHeightMix = Math.min.apply(null,imgHeightArr);
-		// 		var imgHeightMixIndex = $.inArray(imgHeightMix,imgHeightArr);
-		// 		$(value).css({
-		// 			"position" : "absolute",
-		// 			"left" : imgWidth * imgHeightMixIndex,
-		// 			"top" : imgHeightMix
-		// 		});
-		// 		imgHeightArr[imgHeightMixIndex] += img.eq(index).outerHeight() + 20;
-		// 	};
-		// 	var imgHeightMax = Math.max.apply(null,imgHeightArr);
-		// 	$(".works .container").height(imgHeightMax);
-		// });
-
 	};
 	// 图片弹框
 	function popup(){
